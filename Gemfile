@@ -11,7 +11,6 @@ group :production do
  group :development do
    gem 'sqlite3'
  end
-gem 'rails_12factor'
 gem "slim-rails"
  gem 'bootstrap-sass', '~> 3.1.1'
 # Use SCSS for stylesheets
