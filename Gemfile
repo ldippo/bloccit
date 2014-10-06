@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+ruby '2.1.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.5'
 group :production do
@@ -10,9 +10,11 @@ group :production do
  
  group :development do
    gem 'sqlite3'
+   gem 'better_errors'
+   gem 'jazz_hands'
  end
 gem "slim-rails"
- gem 'bootstrap-sass', '~> 3.1.1'
+ gem 'bootstrap-sass', '~> 3.2'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -21,7 +23,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
-
+gem 'autoprefixer-rails'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 gem 'faker'
