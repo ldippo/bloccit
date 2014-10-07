@@ -13,6 +13,7 @@ group :production do
    gem 'better_errors'
    gem 'jazz_hands'
  end
+gem 'devise'
 gem "slim-rails"
  gem 'bootstrap-sass', '~> 3.2'
 # Use SCSS for stylesheets
