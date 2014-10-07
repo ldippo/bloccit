@@ -14,6 +14,7 @@ group :production do
    gem 'jazz_hands'
  end
 gem 'devise'
+gem 'figaro'
 gem "slim-rails"
  gem 'bootstrap-sass', '~> 3.2'
 # Use SCSS for stylesheets
