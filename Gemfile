@@ -52,3 +52,6 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
  gem 'redcarpet'
  gem 'pundit'
+ gem 'carrierwave'
+ gem 'mini_magick'
+ gem 'fog'

@@ -10,10 +10,13 @@ h1= @topic.name
           h4.media-heading
             = link_to (markdown post.title), [@topic, post]
           small
-            | submitted #{time_ago_in_words(post.created_at)} ago by #{post.user.name}
+            = image_tag(post.user.avatar.tiny.url) if post.user.avatar?
+            | submitted #{time_ago_in_words(post.created_at)} ago by
+            | \#{post.user.name}
             br/
             = post.comments.count
-            |  Comments
+            | Comments
+
 
   .col-md-4
     - if policy(Post.new).create?
