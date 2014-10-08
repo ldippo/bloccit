@@ -13,7 +13,7 @@ h1= @topic.name
             | submitted #{time_ago_in_words(post.created_at)} ago by #{post.user.name}
             br/
             = post.comments.count
-            | Comments
+            |  Comments
 
   .col-md-4
     - if policy(Post.new).create?
