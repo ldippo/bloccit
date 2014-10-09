@@ -15,7 +15,8 @@ h1= @topic.name
             | \#{post.user.name}
             br/
             = post.comments.count
-            | Comments
+            |  Comments
+    = will_paginate @posts
 
 
   .col-md-4
