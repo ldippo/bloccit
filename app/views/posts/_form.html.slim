@@ -9,13 +9,14 @@
   = form_group_tag(post.errors[:title]) do
     = f.label :title
     = f.text_field :title, class: 'form-control', placeholder: "Enter post title"
-  - if current_post.image? 
-    = form_group_tag(post.errors[:image]) do
-      p Post Image
-      = image_tag( current_post.image ) 
+  - if post.image?
+    .form-group
+      p Current image
+      = image_tag( post.image )
   = form_group_tag(post.errors[:image]) do
     = f.label :image
-	= f.file_field :image 
+	= f.file_field :image
+	= f.hidden_field :image_cache
 
   = form_group_tag(post.errors[:body]) do
     = f.label :body

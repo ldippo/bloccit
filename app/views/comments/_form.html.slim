@@ -1,0 +1,13 @@
+= form_for [topic, post, post.comments.new] do |f|
+  - if post.errors.any?
+    .alert.alert-danger
+      h4
+        | There are #{pluralize(post.errors.count, "error")}.
+      ul
+        - post.errors.full_messages.each do |msg|
+          li= msg
+  = form_group_tag(post.errors[:body]) do
+    = f.label :body, "Comments"
+    = f.text_area :body, rows: 8, class: 'form-control', placeholder: "Enter comment"
+  .form-group
+    = f.submit "Post comment", class: 'btn btn-success'

@@ -12,6 +12,7 @@ group :production do
    gem 'sqlite3'
    gem 'better_errors'
    gem 'jazz_hands'
+   gem 'binding_of_caller'
  end
 gem 'devise'
 gem 'figaro'

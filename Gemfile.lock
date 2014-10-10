@@ -260,6 +260,7 @@ PLATFORMS
 DEPENDENCIES
   autoprefixer-rails
   better_errors
+  binding_of_caller
   bootstrap-sass (~> 3.2)
   carrierwave
   coffee-rails (~> 4.0.0)

@@ -8,4 +8,5 @@ h1 Edit Post
 			li The incessant use of hashtags will get you banned.
 	.col-md-8
 		= render partial: 'form', locals: {topic: @topic, post: @post}
+		= render partial: "comments/comment", collection: @post.comments
 		

@@ -5,7 +5,11 @@ h1= markdown @post.title
       = image_tag(@post.user.avatar.tiny.url) if @post.user.avatar?
       | submitted #{time_ago_in_words(@post.created_at)} ago by
       |  #{@post.user.name}
+    br/
+    = image_tag(@post.image) if @post.image?
     p= markdown @post.body
+    = render partial: "comments/form", locals:{topic: @topic, post: @post}
+    = render partial: "comments/comment", collection: @post.comments
   .col-md-4
     - if policy(@post).edit?
-      = link_to "Edit", edit_topic_post_path(@topic,@post), class: 'btn btn-success'
+      = link_to "Edit", edit_topic_post_path(@topic , @post), class: 'btn btn-success'
