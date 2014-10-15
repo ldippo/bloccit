@@ -1,8 +1,8 @@
-h2 #{comment.user}
+h2 #{comment.user.name}
 .row
   .col-md-8
     p #{comment.body}
 - if policy(comment).destroy?
-  = link_to "Delete", [@topic, @post, comment], method: :delete
+  = link_to "Delete", [@post, comment], method: :delete
 
 

@@ -1,6 +1,7 @@
 h1= markdown @post.title
 .row
   .col-md-8
+    = render partial: 'votes/voter', locals: { post: @post }
     small
       = image_tag(@post.user.avatar.tiny.url) if @post.user.avatar?
       | submitted #{time_ago_in_words(@post.created_at)} ago by
@@ -16,3 +17,10 @@ h1= markdown @post.title
     |   
     - if policy(@post).destroy?
       = link_to "Delete Post", [@topic, @post], method: :delete, class: 'btn btn-danger', data: {confirm: 'Are you sure?'}
+    div
+      h3
+        = pluralize(@post.points, 'point')
+      small
+        = pluralize(@post.up_votes, 'up vote')
+        |  
+        = pluralize(@post.down_votes,'down vote')
