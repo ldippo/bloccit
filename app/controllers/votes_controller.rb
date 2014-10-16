@@ -25,6 +25,7 @@ class VotesController < ApplicationController
        authorize @vote, :create?
        @vote.save
     end
+  
 
     # http://apidock.com/rails/ActionController/Base/redirect_to
     redirect_to :back
