@@ -88,6 +88,16 @@ end
  member.skip_confirmation!
  member.save!
 
+  # Create a member
+ member = User.new(
+   name:     'Lyle Dippo',
+   email:    'ldippo421@gmail.com',
+   password: 'helloworld',
+ )
+ member.skip_confirmation!
+ member.save!
+
+
 puts "Seed finished"
 puts "#{User.count} users created"
 puts "#{Post.count} posts created"

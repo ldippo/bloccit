@@ -24,3 +24,5 @@ h1= markdown @post.title
         = pluralize(@post.up_votes, 'up vote')
         |  
         = pluralize(@post.down_votes,'down vote')
+    - if current_user
+      = render partial: 'favorites/favorite', locals: { post: @post }

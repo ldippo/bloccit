@@ -6,9 +6,10 @@
    describe "vote methods" do
  
      before do
-       user = User.create
-       topic = Topic.create
-       @post = Post.create(title: 'Post title', body: 'Post bodies must be pretty long.', user: user, topic: topic)
+      @post = Post.new(title: 'Post title', body: 'Post bodies must be pretty long.')
+       post_user = double(votes: @post.votes)
+       allow(@post).to receive(:user) { post_user }
+       @post.save
        3.times { @post.votes.create(value: 1) }
        2.times { @post.votes.create(value: -1) }
 
