@@ -1,20 +1,22 @@
  require 'rails_helper'
  
-
+ 
 
  describe Post do
+   include TestFactories
+   
    describe "vote methods" do
  
      before do
-      @post = Post.new(title: 'Post title', body: 'Post bodies must be pretty long.')
-       post_user = double(votes: @post.votes)
-       allow(@post).to receive(:user) { post_user }
-       @post.save
+       
+       @post = associated_post
+       allow(@post).to receive(:create_vote)
        3.times { @post.votes.create(value: 1) }
        2.times { @post.votes.create(value: -1) }
+       
 
      end
- 
+     
      describe '#up_votes' do
        it "counts the number of votes with value = 1" do
          expect( @post.up_votes ).to eq(3)

@@ -4,6 +4,7 @@ require 'rails_helper'
  
    include TestFactories
    include Devise::TestHelpers
+   
  
    before do 
      @post = associated_post
