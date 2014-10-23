@@ -5,17 +5,7 @@ h1= @topic.name
   .col-md-8
     p.lead= @topic.description
     - @posts.each do |post|
-      .media
-        .media-body
-          h4.media-heading
-            = link_to (markdown post.title), [@topic, post]
-          small
-            = image_tag(post.user.avatar.tiny.url) if post.user.avatar?
-            | submitted #{time_ago_in_words(post.created_at)} ago by
-            |  #{post.user.name}
-            br/
-            = post.comments.count
-            |  Comments
+      = render @posts
     = will_paginate @posts
 
 

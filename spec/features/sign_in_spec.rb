@@ -15,7 +15,7 @@ require 'rails_helper'
        fill_in 'Email', with: user.email
        fill_in 'Password', with: user.password
         within 'form' do
-         click_link 'Sign in'
+         click_button 'Sign in'
        end
        expect(current_path).to eq topics_path
      end

@@ -44,6 +44,7 @@ gem 'spring',        group: :development
 group :test do
   gem 'rspec-rails'
   gem 'capybara'
+  gem 'jazz_hands'
 end
 
 
