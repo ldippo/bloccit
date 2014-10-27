@@ -16,11 +16,22 @@
  @import "http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css";
  @import "bootstrap-sprockets";
  @import "bootstrap";
-
+ html {
+ 	h1, h2, h3, small {color: #ccc;
+ 	font-family: 'Lato', sans-serif;};
+ 	a {color: #82FA58;
+ 	font-family: 'Lato', sans-serif;};
+ 	body{ background: #222;
+ 	font-family: 'Lato', sans-serif; color:#fff;} ;
+ 	h1 {font-weight: 900;}
+ }
+ .disabled, .current {
+ 	color: #efefef;
+ }
  .user-info {
    margin-top: 9px;
  }
- 
+ .media-heading {font-weight: 700;color: #82FA58;}
  .nav {
    margin-top: 5px;
  }
@@ -33,4 +44,8 @@
  }
  .voted {
   opacity: 0.5;
+}
+.jumbotron {
+	background: #82FA58;
+	p {color: #222;font-weight:500;}
 }

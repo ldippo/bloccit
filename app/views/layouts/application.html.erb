@@ -3,6 +3,7 @@
 <head>
   <title>Bloccit</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
@@ -13,6 +14,8 @@
         <li><%= link_to "Bloccit", root_path %></li>
         <li><%= link_to "About", about_path %></li>
         <li><%= link_to "Topics", topics_path %></li>
+        <li><%= link_to "Popular", posts_path %></li>
+        <li><%= link_to "Users", users_path %></li>
         <div class="pull-right user-info">
            <% if current_user %>
             <%= image_tag(current_user.avatar.tiny.url) if current_user.avatar? %>
